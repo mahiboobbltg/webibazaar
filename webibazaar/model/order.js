@@ -27,6 +27,10 @@ const orderSchema = new mongoose.Schema({
     enum: ['Pending', 'Processing', 'Shipped', 'Delivered'],
     default: 'Pending'
   }
+
+
+
+
 });
 
 const Order = mongoose.model('Order', orderSchema);

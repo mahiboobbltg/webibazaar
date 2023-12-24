@@ -2,7 +2,7 @@ const mongoose = require("mongoose")
 
 const registerSchema = mongoose.Schema({
 
-    userid: {
+    userId: {
         type: String,
         unique: true,
         required: true
@@ -29,8 +29,9 @@ const registerSchema = mongoose.Schema({
     },
     token: {
         type: String,
-
     },
+    resetPasswordToken: String,
+  resetPasswordExpires: Date,
 })
 
 const register = mongoose.model("registerdata", registerSchema)
