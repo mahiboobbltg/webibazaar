@@ -17,6 +17,8 @@ const hbs = require("hbs")
 require("./database/connection")
 const reg = require("./model/register")
 const product = require("./model/product")
+const order = require("./model/order")
+const Cart = require("./model/cart")
 
 const verifyToken = require("./middleaware/authent")
 
@@ -57,7 +59,7 @@ app.post("/register", formidable(), async function (req, res) {
 
     } else {
 
-      const enccryptpassword = bcrypt.hash(req.fields.password, 10)
+      const enccryptpassword =await bcrypt.hash(req.fields.password, 10)
       const dataobj = await reg.create({
         userId: req.fields.userId,
         firstname: req.fields.firstname,
@@ -101,6 +103,8 @@ app.get("/profile", verifyToken, function (req, res) {
   res.send("welcome to home page")
 })
 
+
+
 // api for product for post
 
 app.post('/products', formidable(), async function (req, res) {
@@ -126,7 +130,7 @@ app.post('/products', formidable(), async function (req, res) {
 });
 
 
-// api for login for homepage
+// api for productdata 
 
 app.get("/productdata", formidable(), function (req, res) {
   product.find({})
@@ -142,14 +146,12 @@ app.get("/productdata", formidable(), function (req, res) {
     })
 })
 
-
-app.put("/:id",  async (req, res) => {
+// updatedProduct
+app.put("/updatedproduct/:id",  async (req, res) => {
   try {
     const updatedProduct = await product.findByIdAndUpdate(
       req.params.id,
-      {
-        $set: req.body,
-      },
+       req.body,
       { new: true }
     );
     res.status(200).json(updatedProduct);
@@ -159,11 +161,143 @@ app.put("/:id",  async (req, res) => {
 });
 
 
+// delete Product
+
+app.delete("/deleteproduct/:id", async (req, res) => {
+  try {
+    await product.findByIdAndDelete(req.params.id);
+    res.status(200).json("Product has been deleted...");
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 
 
 
+// api for order for post
+app.post("/order",  async (req, res) => {
 
+  try {
+    const { products } = req.body; 
+
+    // Create a new order
+    const newOrder = new order({
+      user: req.user._id, 
+      products: products.map(product => ({
+        product: product.productId,
+        quantity: product.quantity
+      }))
+    });
+
+    await newOrder.save();
+
+    res.status(201).json({ message: 'Order placed successfully', order: newOrder });
+  } catch (error) {
+    res.status(500).json({ message: 'Failed to place order', error: error.message });
+  }
+});
+
+
+
+app.get("/getorderdata", formidable(), function (req, res) {
+  order.find({})
+    .then((response) => {
+      console.log("response", response);
+      res.json({
+        data: response,
+        msg: 'Getting all the order data'
+      });
+    })
+    .catch((err) => {
+      res.send('error has occured', err);
+    })
+})
+
+
+//UPDATE
+app.put("/updateorder/:id",  async (req, res) => {
+  try {
+    const updatedorder = await order.findByIdAndUpdate(
+      req.params.id,
+       req.body,
+      { new: true }
+    );
+    res.status(200).json(updatedorder);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+
+app.delete("/deleteorder/:id", async (req, res) => {
+  try {
+    await order.findByIdAndDelete(req.params.id);
+    res.status(200).json("order has been deleted...");
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+
+
+app.post("/ceatecart", async (req, res) => {
+  const newCart = new Cart(req.body);
+
+  try {
+    const savedCart = await newCart.save();
+    res.status(200).json(savedCart);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+//UPDATE
+app.put("/updatecart/:id",  async (req, res) => {
+  try {
+    const updatedCart = await Cart.findByIdAndUpdate(
+      req.params.id,
+      {
+        $set: req.body,
+      },
+      { new: true }
+    );
+    res.status(200).json(updatedCart);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+//DELETE
+app.delete("/deletecart/:id",  async (req, res) => {
+  try {
+    await Cart.findByIdAndDelete(req.params.id);
+    res.status(200).json("Cart has been deleted...");
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+//GET USER CART
+app.get("/singlecart/:userId",  async (req, res) => {
+  try {
+    const cart = await Cart.findOne({ userId: req.params.userId });
+    res.status(200).json(cart);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+// //GET ALL
+
+app.get("/allcart", async (req, res) => {
+  try {
+    const carts = await Cart.find();
+    res.status(200).json(carts);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 
 
@@ -253,7 +387,7 @@ app.get('/reset/:token', formidable(), async (req, res) => {
 });
 
 //  handle a new password after reset
-app.post('/reset/:token', formidable(), async (req, res) => {
+app.post('/handlereset/:token', formidable(), async (req, res) => {
   try {
     const { token } = req.params;
     const { password } = req.fields;
@@ -284,12 +418,6 @@ app.post('/reset/:token', formidable(), async (req, res) => {
 });
 
 
-
-// const cartRoutes = require('./routes/cartRoutes');
-
-
-
-// app.use('/api', cartRoutes);
 
 
 
