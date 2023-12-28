@@ -24,7 +24,7 @@ const createProduct=async function (req, res) {
     }
   }
 
-  const getProduct=function (req, res) {
+const getProduct=function (req, res) {
     product.find({})
       .then((response) => {
         console.log("response", response);
@@ -38,7 +38,7 @@ const createProduct=async function (req, res) {
       })
   }
 
-  const updateProduct= async (req, res) => {
+const updateProduct= async (req, res) => {
     try {
       const updatedProduct = await product.findByIdAndUpdate(
         req.params.id,

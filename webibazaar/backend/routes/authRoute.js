@@ -18,6 +18,4 @@ router.get('/resetPasswordToken', formidable(), resetPasswordToken)
 router.post('/handlepassword', formidable(), handlePassword)
 
 
-
-
 module.exports = router

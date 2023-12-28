@@ -149,7 +149,7 @@ const forgotPassword=  async function (req, res) {
       }
   
       //  password reset 
-      res.send("this is a token of resetpassword" + " " + token); // Render the form with the token
+      res.send("this is a token of resetpassword" + " " + token); 
   
     } catch (err) {
       console.error('Error in password reset:', err);
@@ -188,29 +188,6 @@ const forgotPassword=  async function (req, res) {
     }
   }
   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

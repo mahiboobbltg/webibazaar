@@ -1,21 +1,28 @@
 import React, { useEffect, useState } from 'react'
+import axios from "axios"
+
 
 function User() {
-    const[user,setuser]=useState([])
-
-useEffect(()=>{
+  const [user, setUsers] = useState([])
 
 
-    axios('/')
-
-
-},[])
-
-
-
+  useEffect(() => {
+    axios.get("http://localhost:3009/api/product/getProduct")
+      .then((response) => setUsers(response.data))
+      .catch((Error) => console.log(Error))
+  }, [])
   return (
-    <div>User</div>
+      <>
+{ user.map((product) => (
+       <p  key={product.id}>{product.productname}</p>
+))};
+
+
+
+
+      </>
   )
-}
+
+  }
 
 export default User

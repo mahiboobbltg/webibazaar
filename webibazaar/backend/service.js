@@ -3,6 +3,8 @@ require("dotenv").config()
 const app = express()
 const bodyparser = require("body-parser")
 require("./database/connection")
+const cors=require("cors")
+
 
 const authRoute=require("./routes/authRoute")
 const productRoute=require("./routes/productRoute")
@@ -13,6 +15,7 @@ const cartRoute=require("./routes/cartRoute")
 
 app.use(express.urlencoded({ extended: false }))
 app.use(express.json())
+app.use(cors())
 app.use(bodyparser.json())
 
 
