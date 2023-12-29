@@ -25,14 +25,15 @@ function Herosubsec4() {
 
 
     return (
-        <div className='container mb-4 mt-4 bg-light'>
-            <div className='mb-3'>
-                <h3>  TOP CATEGORY</h3>
-
-            </div>
+        <div className='container mb-5 mt-5 bg-light'>
+            
             <div className='row'>
                 <div className='col-sm-8'>
                     <div className='row'>
+                    <div className=' mb-3 mt-3'>
+                <h3>  TOP CATEGORY</h3>
+
+            </div>
                         {products ? (
                             products.data.map((item, index) => (
                                 <div className='col-sm-4 mb-3'>

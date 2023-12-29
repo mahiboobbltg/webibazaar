@@ -25,8 +25,8 @@ function Herosubsec2() {
 
     return (
 
-        <div className='container md-3 mt-3'>
-            <div className='mb-3'>
+        <div className='container md-3 '>
+            <div className='mb-3 mt-3'>
                 <h3>  LATEST PRODUCTS</h3>
 
             </div>
@@ -46,10 +46,10 @@ function Herosubsec2() {
                                     <i class="fa-regular fa fa-star"></i>
                                     <i class="fa-regular fa fa-star"></i>
                                          </div>
-                                        <div className='card-title fs-5'>
+                                        <div className='card-title fs-5 fw-bold'>
                                    
                                         {item.productname}
-                                        <div className=''>
+                                        <div className='fw-bold'>
                                           $  {item.price}
                                         </div>
 

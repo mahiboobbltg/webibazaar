@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 // import image from '../images/images.jpeg'
-import c1 from '../images/c1.jpeg'
-// import p1 from '../images/p1.jpeg'
+import b1 from '../images/b1.jpg'
+import {  Card } from 'react-bootstrap'
 
-
-function Herosubsec3() {
+function Blog() {
     const [products, setproducts] = useState();
     useEffect(() => {
         const getproducts = async () => {
@@ -26,43 +25,36 @@ function Herosubsec3() {
 
     return (
 
-        <div className='container md-3'>
+        <div className='container'>
             <div className='mb-3'>
-                <h3>  TOP CATEGORY</h3>
+                <h3>LATEST NEWS</h3>
 
             </div>
             <div className='row'>
-
                 {products ? (
                     products.data.map((item, index) => (
-                        <div key={index} className='col  my-3 fs-6'>
-                            <div className='card '>
-                                <img src={c1} className="img-fluid position-relative" alt="images" height={150} />
-                            </div>
+                        <div key={index} className='col-md-4  my-3 fs-6'>
+                            <Card className='text-center'>
+                                <Card.Img variant="top" src={b1}  />
+                                <Card.Body>
+                                    <Card.Title>Card Title</Card.Title>
+                                    <Card.Text >
+                                        Some quick example text to build on the card title and make up the
+                                        bulk of the card's content.
+                                    </Card.Text>
+                                   
+                                </Card.Body>
+                            </Card>
+
+
                         </div>
                     ))
                 ) : (
                     <h1>Loading...</h1>
                 )}
             </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-           
         </div>
     );
 }
 
-export default Herosubsec3
+export default Blog

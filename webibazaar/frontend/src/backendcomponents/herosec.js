@@ -1,5 +1,6 @@
 import React from 'react'
-import image from '../images/images.jpeg'
+import Carousel from 'react-bootstrap/Carousel';
+import home from '../images/home.jpg'
 
 function Herosecton() {
     return (
@@ -7,68 +8,95 @@ function Herosecton() {
             <div className='container'>
                 <div className='row'>
                     <div className='col-md-3'>
-                        <div className='card border-0'>
-                                    <ul className="list-group">
-                                        <li className="list-group-item bg-warning active" aria-current="true">An active item</li>
-                                        <li className="list-group-item">A second item</li>
-                                        <li className="list-group-item">A third item</li>
-                                        <li className="list-group-item">A fourth item</li>
-                                        <li className="list-group-item">And a fifth one</li>
-                                        <li className="list-group-item">A third item</li>
-                                        <li className="list-group-item">A fourth item</li>
-                                        <li className="list-group-item">And a fifth one</li>
-                                        <li className="list-group-item">And a fifth one</li>
-                                        <li className="list-group-item">And a fifth one</li>
-                                    </ul>
+                        <div className='card'>
+                            <div className='bg-warning d-flex justify-content-around align-items-center'>
+
+                                <i className='fa fa-bars  ms-0'></i>
+                                <p className='fw-bolder mt-3 me-5 '>ALL CATEGORY</p>
+
+
+                            </div>
+                            <div className='d-flex justify-content-between '>
+                                <p className='h6'> Accessories</p>
+                                <i className='fa fa-angle-right'></i>
+                            </div>
+                            <div className=''>
+                                <p className='h6'> Hydraulic</p>
+                            </div>
+                            <div className='d-flex justify-content-between'>
+                                <p className='h6'> Lamp</p>
+                                <i className='fa fa-angle-right'></i>
+                            </div>
+                            <div className=''>
+                                <div className='h6'><span>Cryotronics</span></div>
+                            </div>
+                            <div className=''>
+                                <div className='h6'><span> Induction</span></div>
+
+                            </div>
+                            <div className='d-flex justify-content-between '>
+                                <p className='h6'>Avionic</p>
+                                <i className='fa fa-angle-right'></i>
+                            </div>
+                            <div className=''>
+                                <p className='h6'> Circuits</p>
+                            </div>
+                            <div className=''>
+                                <p className='h6'>ElectronicsY</p>
+                            </div>
+                            <div className=''>
+                                <p className='h6 '>Handwatch</p>
+                            </div>
 
                         </div>
-
                     </div>
                     <div className='col-md-9'>
-                        <div className='card border-0'>
-                                    <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel">
-                                        <div className="carousel-indicators">
-                                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
-                                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                                        </div>
-                                        <div className="carousel-inner">
-                                            <div className="carousel-item active">
-                                                <img src={image} className="card-img-top" alt="images" height={400} />
+                        <Carousel data-bs-theme="dark">
+                            <Carousel.Item>
+                                <img
+                                    className="d-block w-100"
+                                    src={home}
+                                    alt="First slide"
+                                />
+                                <Carousel.Caption >
+                                    <h5>First slide label</h5>
+                                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                                </Carousel.Caption>
+                            </Carousel.Item>
+                            <Carousel.Item>
+                                <img
+                                    className="d-block w-100"
+                                    src={home}
+                                    alt="Second slide"
+                                />
+                                <Carousel.Caption>
+                                    <h5>Second slide label</h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </Carousel.Caption>
+                            </Carousel.Item>
+                            <Carousel.Item>
+                                <img
+                                    className="d-block w-100"
+                                    src={home}
+                                    alt="Third slide"
+                                />
+                                <Carousel.Caption>
+                                    <h5>Third slide label</h5>
+                                    <p>
+                                        Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+                                    </p>
+                                </Carousel.Caption>
+                            </Carousel.Item>
+                        </Carousel>
 
-                                            </div>
-                                            <div className="carousel-item">
-                                                <img src={image} className="card-img-top" alt="images" />
 
-                                            </div>
-                                            <div className="carousel-item">
-                                                <img src={image} className="card-img-top" alt="images" />
+                    </div>
 
-                                            </div>
-                                        </div>
-                                        <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                                            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                                            <span className="visually-hidden">Previous</span>
-                                        </button>
-                                        <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                                            <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                                            <span className="visually-hidden">Next</span>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
+
+
 
 
                 </div>
-
-
-
-
-
-
-
-
-
 
 
 

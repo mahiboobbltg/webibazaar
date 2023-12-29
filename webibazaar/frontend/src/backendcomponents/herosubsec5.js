@@ -5,7 +5,7 @@ import c1 from '../images/c1.jpeg'
 // import p1 from '../images/p1.jpeg'
 
 
-function Herosubsec3() {
+function Herosubsec5() {
     const [products, setproducts] = useState();
     useEffect(() => {
         const getproducts = async () => {
@@ -65,4 +65,4 @@ function Herosubsec3() {
     );
 }
 
-export default Herosubsec3
+export default Herosubsec5

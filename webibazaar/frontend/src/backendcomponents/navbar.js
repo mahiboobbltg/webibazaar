@@ -1,49 +1,85 @@
 import React from 'react'
 
 import { NavDropdown } from 'react-bootstrap'
+import MyComponent from './dropdown'
+import logo from "../images/webi-logo.png"
+import desk from "../images/desk.png"
+import tab from "../images/tab.png"
+import phon from "../images/phon.png"
 
 
 function Navbar() {
     return (
-        <div >
-            <div className='container-fluid mb-2 bg-light'>
+        <div className='container-fluid mb-2 bg-light'>
+            <div >
                 <div className='row'>
                     <div className='col '>
-                        <div className='nav d-flex justify-content-around'>
-                            <div className='nav-link'>home</div>
-                            <div className='nav-link'>home</div>
-                            <div className='nav-link'>home</div>
-                            <div className='nav-link'>home</div>
-                            <div className='nav-link'>home</div>
-                            <div className='nav-link'>home</div>
+                        <div className='nav d-flex justify-content-around align-items-center'>
+                            <div className='nav-link'>
+                                <img src={logo} alt='logo' />
+                                
+                            </div>
+                            <div className='nav-link'>Shopeur Electronics WooCommerce Theme</div>
+                            <div className=' d-flex'>
+                            <div className='nav-link '><img src={desk} alt='desk' width={50}/>Desktop</div>
+                            <div className='nav-link'><img src={tab} alt='tab'width={50} />Tablet</div>
+                            <div className='nav-link'><img src={phon} alt='phon'width={50} />Mobile</div>
+                            
+                            </div>
+                          
+                            <div className='nav-link'><button className='btn btn-secondary float-end'>Buy</button></div>
                         </div>
                     </div>
                 </div>
             </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
             <div className='conatiner mb-2'>
                 <div className='row'>
                     <div className='col'>
                         <div className='nav d-flex justify-content-around'>
-                            <div className='nav-link'><h2>shouper</h2></div>
+                            <div className='nav-link'>shouper</div>
                             <div className='nav-link d-flex '>
-                                <div className='d-flex  border'>
-                                    <input type='dropdown' className='  border-0' placeholder='allcategory' />
+                                <div className='d-flex  border ' style={{Width:"600px"}}>
+                               < MyComponent/>
                                     <input type='search' className='  border-0' placeholder='seacrch' />
-                                </div>
-                                <button className='btn btn-warning   '>
+                                    <button className='btn btn-warning   '>
                                     search
                                 </button>
+                                </div>
+                              
                             </div>
                             <div className='nav-link d-flex'>
-                                <div className='btn btn-light text-center'><i className='fa fa-user fa-xl'></i> </div>
-                                <div> <h5>My Account</h5>
+                                <div className='btn btn-light text-center'><i className='fa fa-user '></i> </div>
+                                <div> My Account
                                     <span>Sign in</span></div>
                             </div>
                             <div className='nav-link d-flex'>
-                                <div className='btn btn-light text-center'><i className='fa fa-user fa-xl'></i> </div>
-                                <div> <h5>My Cart</h5>
+                                <div className='btn btn-light text-center'><i className='fa fa-user '></i> </div>
+                                <div>  <span>My Cart</span>
                                     <span>Sign in</span></div>
                             </div>
                         </div>
@@ -53,7 +89,7 @@ function Navbar() {
 
 
 
-            <div className='container-fluid bg-primary text-white mb-4'>
+            <div className='container bg-primary text-white mb-4'>
                 <div className='row'>
                     <div className='col my-2'>
                         <div className='nav d-flex justify-content-between align-items-center'>
