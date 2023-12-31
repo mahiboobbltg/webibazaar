@@ -6,6 +6,7 @@ import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 
+import './style.css'
 
 
 
@@ -22,10 +23,10 @@ function Footer
                             <Navbar.Collapse id="navbarScroll">
                                 <Nav className="me-auto my-4 my-lg-0 " style={{ maxHeight: '150px' }} navbarScroll>
                                     <Nav.Link href="#action1"><Button variant="light"><i className="fa-brands fa-md fa fa-facebook-f"></i></Button></Nav.Link>
-                                    <Nav.Link href="#action1"><Button variant="light"><i class="fa-brands fa fa-twitter"></i></Button></Nav.Link>
-                                    <Nav.Link href="#action1"><Button variant="light"><i class="fa-sharp fa fa-solid fa-rss"></i></Button></Nav.Link>
-                                    <Nav.Link href="#action1"><Button variant="light"><i class="fa-brands fa fa-square-youtube"></i></Button></Nav.Link>
-                                    <Nav.Link href="#action1"><Button variant="light"><i class="fa-solid fa-camera"></i></Button></Nav.Link>
+                                    <Nav.Link href="#action1"><Button variant="light"><i className="fa-brands fa fa-twitter"></i></Button></Nav.Link>
+                                    <Nav.Link href="#action1"><Button variant="light"><i className="fa-sharp fa fa-solid fa-rss"></i></Button></Nav.Link>
+                                    <Nav.Link href="#action1"><Button variant="light"><i className="fa-brands fa fa-square-youtube"></i></Button></Nav.Link>
+                                    <Nav.Link href="#action1"><Button variant="light"><i className="fa-solid fa-camera"></i></Button></Nav.Link>
                                 </Nav>
                                 <Navbar.Text className='text-white fs-4 me-5'>
                                     SIGN UP FOR NEWSLETTER
@@ -99,26 +100,31 @@ function Footer
 
 
                 <div className="container">
-                    <p >
+                  
                         <pre className="text-center">
 
                             Radio | Hydraulic | Lamp | Pro Electron | Atomtronics | Avionics |
                             Radio | Cryotronics | induction | Circuits | Cryotronics
                         </pre>
-                    </p>
-                    <p >
+                   
                         <pre className="text-center">
 
                             | Spintronics | Accessories | Electronics | Chairs | Bar Table |
                             Bioelectronics | Circuits
                         </pre>
-                    </p>
+              
                 </div>
 
                 <hr className='mb-4' />
 
                 <div className="container text-center">
                     <p >Designed by Demo Theme All rights reserved.</p>
+                </div>
+                <div className="container d-flex justify-content-center align-items-center">
+                   <img className="dcard" src='/images/card1.png' alt='card'/ >
+                   <img className="dcard" src='/images/card2.png' alt='card'/>
+                   <img className="dcard" src='/images/card1.png' alt='card'/>
+                   <img className="dcard" src='/images/card2.png' alt='card'/>
                 </div>
             </footer>
         </div>

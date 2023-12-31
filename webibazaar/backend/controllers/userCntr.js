@@ -37,7 +37,6 @@ const createUser=async function (req, res) {
 
 
 
-
 const loginHomepage=async function (req, res) {
     let { email, password } = req.fields
     if (!(email && password)) {
@@ -55,24 +54,6 @@ const loginHomepage=async function (req, res) {
       }
     }
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 // Forgot Password 

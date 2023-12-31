@@ -1,6 +1,5 @@
 import React from 'react'
 import Carousel from 'react-bootstrap/Carousel';
-import home from '../images/home.jpg'
 
 function Herosecton() {
     return (
@@ -10,11 +9,8 @@ function Herosecton() {
                     <div className='col-md-3'>
                         <div className='card'>
                             <div className='bg-warning d-flex justify-content-around align-items-center'>
-
                                 <i className='fa fa-bars  ms-0'></i>
                                 <p className='fw-bolder mt-3 me-5 '>ALL CATEGORY</p>
-
-
                             </div>
                             <div className='d-flex justify-content-between '>
                                 <p className='h6'> Accessories</p>
@@ -55,7 +51,7 @@ function Herosecton() {
                             <Carousel.Item>
                                 <img
                                     className="d-block w-100"
-                                    src={home}
+                                    src='/images/home.jpg'
                                     alt="First slide"
                                 />
                                 <Carousel.Caption >
@@ -66,7 +62,7 @@ function Herosecton() {
                             <Carousel.Item>
                                 <img
                                     className="d-block w-100"
-                                    src={home}
+                                    src='/images/home.jpg'
                                     alt="Second slide"
                                 />
                                 <Carousel.Caption>
@@ -77,7 +73,7 @@ function Herosecton() {
                             <Carousel.Item>
                                 <img
                                     className="d-block w-100"
-                                    src={home}
+                                    src='/images/home.jpg'
                                     alt="Third slide"
                                 />
                                 <Carousel.Caption>

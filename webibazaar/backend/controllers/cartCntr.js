@@ -35,6 +35,7 @@ const createCart=async function(userId, productId, quantity) {
       throw new Error(err.message);
     }
   }
+
 const getCart=async (req, res) => {
     try {
       const carts = await Cart.find();
@@ -43,6 +44,7 @@ const getCart=async (req, res) => {
       res.status(500).json(err);
     }
   }
+
 const updateCart=async (req, res) => {
     try {
       const updatedCart = await Cart.findByIdAndUpdate(
@@ -57,6 +59,7 @@ const updateCart=async (req, res) => {
       res.status(500).json(err);
     }
   }
+  
 const deleteCart=async (req, res) => {
     try {
       await Cart.findByIdAndDelete(req.params.id);

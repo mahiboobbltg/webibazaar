@@ -1,8 +1,6 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "proxcy":"http://localhost:3009",   
-
   "description": "",
   "main": "index.js",
   "scripts": {

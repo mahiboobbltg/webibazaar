@@ -1,8 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-// import image from '../images/images.jpeg'
-import c1 from '../images/c1.jpeg'
-// import p1 from '../images/p1.jpeg'
 
 
 function Herosubsec5() {
@@ -37,7 +34,7 @@ function Herosubsec5() {
                     products.data.map((item, index) => (
                         <div key={index} className='col  my-3 fs-6'>
                             <div className='card '>
-                                <img src={c1} className="img-fluid position-relative" alt="images" height={150} />
+                                <img src='/images/c1.jpeg' className="img-fluid position-relative" alt="images" height={150} />
                             </div>
                         </div>
                     ))

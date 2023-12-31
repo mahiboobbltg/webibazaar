@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-// import image from '../images/images.jpeg'
-import b1 from '../images/b1.jpg'
 import {  Card } from 'react-bootstrap'
 
 function Blog() {
@@ -24,29 +22,24 @@ function Blog() {
 
 
     return (
-
         <div className='container'>
             <div className='mb-3'>
                 <h3>LATEST NEWS</h3>
-
             </div>
             <div className='row'>
                 {products ? (
                     products.data.map((item, index) => (
                         <div key={index} className='col-md-4  my-3 fs-6'>
                             <Card className='text-center'>
-                                <Card.Img variant="top" src={b1}  />
+                                <Card.Img variant="top" src='/images/b1.jpg'  />
                                 <Card.Body>
                                     <Card.Title>Card Title</Card.Title>
                                     <Card.Text >
                                         Some quick example text to build on the card title and make up the
                                         bulk of the card's content.
                                     </Card.Text>
-                                   
                                 </Card.Body>
                             </Card>
-
-
                         </div>
                     ))
                 ) : (

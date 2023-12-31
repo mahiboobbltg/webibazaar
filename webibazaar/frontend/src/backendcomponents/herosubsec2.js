@@ -41,10 +41,10 @@ function Herosubsec2() {
                                     <img src={"https://pixeltemplate.com/wordpress/shopeur/wp-content/uploads/2020/08/27-300x298.jpg"} className="img-fluid position-relative" alt="images" height={150} />
                                     
                                     <div> 
-                                    <i class="fa-regular fa fa-star"></i>
-                                    <i class="fa-regular fa fa-star"></i>
-                                    <i class="fa-regular fa fa-star"></i>
-                                    <i class="fa-regular fa fa-star"></i>
+                                    <i className="fa-regular fa fa-star"></i>
+                                    <i className="fa-regular fa fa-star"></i>
+                                    <i className="fa-regular fa fa-star"></i>
+                                    <i className="fa-regular fa fa-star"></i>
                                          </div>
                                         <div className='card-title fs-5 fw-bold'>
                                    

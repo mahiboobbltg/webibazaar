@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-// import image from '../images/images.jpeg'
-import c1 from '../images/c1.jpeg'
 
 
 function Homepage() {
@@ -35,7 +33,7 @@ function Homepage() {
                     products.data.map((item, index) => (
                         <div key={index} className='col  my-3 fs-6'>
                             <div className='card '>
-                                <img src={c1} className="img-fluid position-relative" alt="images" height={150} />
+                                <img src='/images/c1.jpeg' className="img-fluid position-relative" alt="images" height={150} />
                                 <button className='pbtn w-75 btn bg-white  position-absolute bottom-0 start-50 translate-middle'>submit</button>
                             </div>
                         </div>
@@ -47,5 +45,5 @@ function Homepage() {
         </div>
     );
 }
-
+ 
 export default Homepage

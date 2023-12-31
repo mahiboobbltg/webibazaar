@@ -1,51 +1,9 @@
-// import React, { useState, useEffect } from 'react';
-// import axios from 'axios'
-
-// const MyComponent = () => {
-//   const [selectedValue, setSelectedValue] = useState('');
-//   const [options, setOptions] = useState();
-//   useEffect(() => {
-//     const getproducts = async () => {
-//         try {
-//             const response = await axios.get(
-//                 'http://localhost:3009/api/product/getProduct'
-//             );
-//             const data = await response.data;
-//             setOptions(data);
-
-//         } catch (error) {
-//             console.log(error)
-//         }
-//     }
-//     getproducts();
-// }, []);
-// console.log(options)
-//   const handleSelectChange = (event) => {
-//     setSelectedValue(event.target.value);
-//   };
-
-//   return (
-//     <div>
-//       <select value={selectedValue} onChange={handleSelectChange}>
-//         {options.map((option,index) => (
-//           <option key={index} value={option.value}>{option.productname}</option>
-//         ))}
-//       </select>
-//       <p>Selected value: {selectedValue}</p>
-//     </div>
-//   );
-// };
-
-// export default MyComponent;
-
-
-
-
-
 import React, { useState } from "react";
 
 const MyComponent = () => {
-  const [ setSelectCity] = useState("");
+
+  // eslint-disable-next-line
+  const [selectCity, setSelectCity] = useState("");
   const cities = [
     { id: "1", value: "Delhi" },
     { id: "2", value: "Mumbai" },
@@ -59,9 +17,9 @@ const MyComponent = () => {
 
   return (
     <>
-      <select className="form-control" onChange={onChange}>
-     
-        <option>All Categories  <i className="fa fa-angle-down"></i> </option>
+      <select className="border-0"  style={{width:"200px"}} onChange={onChange}>
+      <i className="fa fa-angle-down"></i>
+        <option>All Categories  </option>
         {cities.map((cities) => (
           <option key={cities.id} value={cities.value} >
             {cities.value}

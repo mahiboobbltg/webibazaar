@@ -4,7 +4,11 @@ const app = express()
 const bodyparser = require("body-parser")
 require("./database/connection")
 const cors=require("cors")
-
+const corsOptions ={
+    origin:'*', 
+    credentials:true,            
+    optionSuccessStatus:200,
+ }
 
 const authRoute=require("./routes/authRoute")
 const productRoute=require("./routes/productRoute")
@@ -15,7 +19,7 @@ const cartRoute=require("./routes/cartRoute")
 
 app.use(express.urlencoded({ extended: false }))
 app.use(express.json())
-app.use(cors())
+app.use(cors(corsOptions))
 app.use(bodyparser.json())
 
 

@@ -22,6 +22,8 @@ const createOrder=async (req, res) => {
       res.status(500).json({ message: 'Failed to place order', error: error.message });
     }
   }
+
+
 const getOrder=function (req, res) {
     order.find({})
       .then((response) => {
@@ -35,6 +37,8 @@ const getOrder=function (req, res) {
         res.send('error has occured', err);
       })
   }
+
+
 const updateOrder=async (req, res) => {
     try {
       const updatedorder = await order.findByIdAndUpdate(
@@ -48,6 +52,7 @@ const updateOrder=async (req, res) => {
     }
   }
 
+  
 const deleteOrder= async (req, res) => {
     try {
       await order.findByIdAndDelete(req.params.id);
