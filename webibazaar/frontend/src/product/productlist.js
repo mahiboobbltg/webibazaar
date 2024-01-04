@@ -12,7 +12,6 @@ import LatestProduct from '../backendcomponents/latestproduct';
 
 import TopCategory from '../backendcomponents/topcategory';
 
-
 function Productlist() {
     const [products, setproducts] = useState();
 
@@ -129,6 +128,8 @@ function Productlist() {
             <LatestProduct />
             <TopCategory />
             <Blog />
+           
+            
             <Movingbrand />
             <Footer />
 

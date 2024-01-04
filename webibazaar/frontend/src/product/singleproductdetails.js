@@ -68,7 +68,6 @@ function ControlledTabsExample() {
 
                     </tbody>
                   </table>
-
                 </div>
               </div>
             </div>

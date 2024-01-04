@@ -49,50 +49,42 @@ function Herosecton() {
                             </div>
 
                             <List >
-
-
-
                                 <HtmlTooltip placement="right-start" className="bg-white"
                                     title={
-                                            <Box >
-                                                <div className='row'>
-                                                    <Typography className='card-body col-4' component="div" >
-                                                        <div className='card-body'>
-                                                            <div className='card-title'>CATEGORY</div>
-                                                            <p>  <span>Avionics</span></p>
-                                                            <p>  <span>Avionics</span></p>
-                                                            <p>  <span>Avionics</span></p>
-                                                            <p>  <span>Avionics</span></p>
-                                                            <p>  <span>Avionics</span></p>
-                                                        </div>
-                                                    </Typography>
-                                                    <Typography className='card-body col-4' component="div" >
-                                                        <div className='card-body'>
-                                                            <div className='card-title'>CATEGORY</div>
-                                                            <p>  <span>Avionics</span></p>
-                                                            <p>  <span>Avionics</span></p>
-                                                            <p>  <span>Avionics</span></p>
-                                                            <p>  <span>Avionics</span></p>
-                                                            <p>  <span>Avionics</span></p>
-                                                        </div>
-                                                    </Typography>
-                                                    <Typography className='card-body col-4' component="div" >
-                                                        <div className='card-body'>
-                                                            <div className='card-title'>CATEGORY</div>
-                                                            {/* <p>  <img src='https://pixeltemplate.com/wordpress/shopeur/wp-content/uploads/2020/08/21.jpg' width={200} alt='rrrr' />  </p> */}
-                                                          
-                                                            <p>  <span>Avionics</span></p>
-                                                            <p>  <span>Avionics</span></p>
-                                                        
-                                                        </div>
-                                                    </Typography>
+                                        <Box >
+                                            <div className='row'>
+                                                <Typography className='card-body col-4' component="div" >
+                                                    <div className='card-body'>
+                                                        <div className='card-title'>CATEGORY</div>
+                                                        <p>  <span>Avionics</span></p>
+                                                        <p>  <span>Avionics</span></p>
+                                                        <p>  <span>Avionics</span></p>
+                                                        <p>  <span>Avionics</span></p>
+                                                        <p>  <span>Avionics</span></p>
+                                                    </div>
+                                                </Typography>
+                                                <Typography className='card-body col-4' component="div" >
+                                                    <div className='card-body'>
+                                                        <div className='card-title'>CATEGORY</div>
+                                                        <p>  <span>Avionics</span></p>
+                                                        <p>  <span>Avionics</span></p>
+                                                        <p>  <span>Avionics</span></p>
+                                                        <p>  <span>Avionics</span></p>
+                                                        <p>  <span>Avionics</span></p>
+                                                    </div>
+                                                </Typography>
+                                                <Typography className='card-body col-4' component="div" >
+                                                    <div className='card-body'>
+                                                        <div className='card-title'>CATEGORY</div>
+                                                        {/* <p>  <img src='https://pixeltemplate.com/wordpress/shopeur/wp-content/uploads/2020/08/21.jpg' width={200} alt='rrrr' />  </p> */}
 
-                                                </div>
+                                                        <p>  <span>Avionics</span></p>
+                                                        <p>  <span>Avionics</span></p>
 
-
-
-
-                                            </Box>
+                                                    </div>
+                                                </Typography>
+                                            </div>
+                                        </Box>
                                     }
                                 >
                                     <ListItemButton>    <ListItemText primary="Sent mail" />  </ListItemButton>
@@ -101,20 +93,20 @@ function Herosecton() {
                                 <ListItemButton>
                                     <ListItemText primary="Drafts" />
                                 </ListItemButton>
-                                
+
                                 <ListItemButton>
                                     <ListItemText primary="Drafts" />
                                 </ListItemButton>
                                 <HtmlTooltip placement="right-start" className="bg-white"
                                     title={
-                                              
-                                                    <Typography  className='col-12' >
-                                                        <div className='card-body'>
-                                                            <p className='ps-4 pe-4 ms-5 me-5'>  <span>Avionics</span></p>
-                                                            <p className='ps-4 pe-4 ms-5 me-5'>  <span>Avionics</span></p>
-                                                      
-                                                        </div>
-                                                    </Typography>
+
+                                        <Typography className='col-12' >
+                                            <div className='card-body'>
+                                                <p className='ps-4 pe-4 ms-5 me-5'>  <span>Avionics</span></p>
+                                                <p className='ps-4 pe-4 ms-5 me-5'>  <span>Avionics</span></p>
+
+                                            </div>
+                                        </Typography>
                                     }
                                 >
                                     <ListItemButton>   <ListItemText primary="Lamp" />  </ListItemButton>
@@ -122,32 +114,32 @@ function Herosecton() {
                                 <ListItemButton>
                                     <ListItemText primary="Drafts" />
                                 </ListItemButton>
-                                
+
                                 <ListItemButton>
                                     <ListItemText primary="Drafts" />
                                 </ListItemButton>
-                                
+
                                 <HtmlTooltip placement="right-start" className="bg-white"
                                     title={
-                                              
-                                                    <Typography  className='col-12' >
-                                                        <div className='card-body'>
-                                                            <p className='ps-4 pe-4 ms-5 me-5'>  <span>Avionics</span></p>
-                                                            <p className='ps-4 pe-4 ms-5 me-5'>  <span>Avionics</span></p>
-                                                      
-                                                        </div>
-                                                    </Typography>
+
+                                        <Typography className='col-12' >
+                                            <div className='card-body'>
+                                                <p className='ps-4 pe-4 ms-5 me-5'>  <span>Avionics</span></p>
+                                                <p className='ps-4 pe-4 ms-5 me-5'>  <span>Avionics</span></p>
+
+                                            </div>
+                                        </Typography>
                                     }
                                 >
                                     <ListItemButton>    <ListItemText primary="Avionics" />  </ListItemButton>
                                 </HtmlTooltip>
-                                
+
                                 <ListItemButton>
                                     <ListItemText primary="Drafts" />
                                 </ListItemButton>
-                                
-                              
-                                
+
+
+
                             </List>
 
                         </div>
@@ -160,9 +152,11 @@ function Herosecton() {
                                     src='/images/home.jpg'
                                     alt="First slide"
                                 />
-                                <Carousel.Caption >
-                                    <h5>First slide label</h5>
-                                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                             <Carousel.Caption style={{ color: "white", marginLeft: "40%",  }}>
+                                    <h6>Spring-SUMMER 2022</h6>
+                                    <h1>Mi Airdots Pro</h1>
+                                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.pharetra augue mollis interdum.</p>
+                                    <button className='btn btn-primary'>Shop now</button>
                                 </Carousel.Caption>
                             </Carousel.Item>
                             <Carousel.Item>
@@ -171,9 +165,11 @@ function Herosecton() {
                                     src='/images/home.jpg'
                                     alt="Second slide"
                                 />
-                                <Carousel.Caption>
-                                    <h5>Second slide label</h5>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                               <Carousel.Caption style={{ color: "white", marginLeft: "43%",  }}>
+                                    <h6>Spring-SUMMER 2022</h6>
+                                    <h1>Mi Airdots Pro</h1>
+                                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.pharetra augue mollis interdum.</p>
+                                    <button className='btn btn-primary'>Shop now</button>
                                 </Carousel.Caption>
                             </Carousel.Item>
                             <Carousel.Item>
@@ -182,11 +178,11 @@ function Herosecton() {
                                     src='/images/home.jpg'
                                     alt="Third slide"
                                 />
-                                <Carousel.Caption>
-                                    <h5>Third slide label</h5>
-                                    <p>
-                                        Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-                                    </p>
+                              <Carousel.Caption style={{ color: "white", marginLeft: "43%",  }}>
+                                    <h6>Spring-SUMMER 2022</h6>
+                                    <h1>Mi Airdots Pro</h1>
+                                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.pharetra augue mollis interdum.</p>
+                                    <button className='btn btn-primary'>Shop now</button>
                                 </Carousel.Caption>
                             </Carousel.Item>
                         </Carousel>
