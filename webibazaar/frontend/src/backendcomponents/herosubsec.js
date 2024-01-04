@@ -1,8 +1,19 @@
 import { React } from 'react'
 
+
+
 const Herosubsec = () => {
+   
+
+
+
     return (
         <div className='container mt-4'>
+
+
+
+
+
             <div className='mb-4  '>
                 <div className='row'>
                     <div className='col-lg-6 col-sm-12 col-md-6 mb-4'>

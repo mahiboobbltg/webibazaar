@@ -2,6 +2,12 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import {  Card } from 'react-bootstrap'
 
+
+
+
+
+
+
 function Blog() {
     const [products, setproducts] = useState();
     useEffect(() => {
@@ -22,14 +28,20 @@ function Blog() {
 
 
     return (
-        <div className='container'>
+
+<>
+
+
+
+
+<div className='container'>
             <div className='mb-3'>
                 <h3>LATEST NEWS</h3>
             </div>
             <div className='row'>
                 {products ? (
                     products.data.map((item, index) => (
-                        <div key={index} className='col-md-4  my-3 fs-6'>
+                        <div key={index} className='col-lg-3  my-3 fs-6'>
                             <Card className='text-center'>
                                 <Card.Img variant="top" src='/images/b1.jpg'  />
                                 <Card.Body>
@@ -46,7 +58,19 @@ function Blog() {
                     <h1>Loading...</h1>
                 )}
             </div>
+
+
+
+          
+
+
+
         </div>
+</>
+
+
+
+  
     );
 }
 

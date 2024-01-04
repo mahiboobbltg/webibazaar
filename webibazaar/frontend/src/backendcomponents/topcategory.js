@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 
 
-function Herosubsec3() {
+function TopCategory () {
     const [products, setproducts] = useState();
     useEffect(() => {
         const getproducts = async () => {
@@ -32,7 +32,7 @@ function Herosubsec3() {
 
                 {products ? (
                     products.data.map((item, index) => (
-                        <div key={index} className='col  my-3 fs-6'>
+                        <div key={index} className='col-lg-3  my-3 fs-6'>
                             <div className='card '>
                                 <img src='/images/c1.jpeg' className="img-fluid position-relative" alt="images" height={150} />
                             </div>
@@ -62,4 +62,4 @@ function Herosubsec3() {
     );
 }
 
-export default Herosubsec3
+export default TopCategory 

@@ -1,8 +1,10 @@
-import './home.css';
-import Header from './header';
-import ProductList from './productList';
+// import Header from './header';
+import ProductList from '../components/productList';
 import CartList from './cartList';
 import { useState } from 'react';
+import Navbar from '../backendcomponents/navbar';
+
+
 
 function Home() {
  // eslint-disable-next-line
@@ -64,8 +66,8 @@ function Home() {
 
   return (
     <div>
-      <Header count={cart.length}
-        handleShow={handleShow} ></Header>
+      <Navbar count={cart.length}
+        handleShow={handleShow} > </Navbar>
 
       {
         showCart ?

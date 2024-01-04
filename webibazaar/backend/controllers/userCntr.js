@@ -7,8 +7,7 @@ const jwt = require("jsonwebtoken")
 
 const createUser=async function (req, res) {
     let { userId, firstname, lastname, email, phone, password } = req.fields
-  
-    if (!(userId && firstname && lastname && email && phone && password)) {
+    if (!(userId && firstname && lastname && email && phone && password )) {
       res.status(400).send("check your  inputs!!")
     }
     else {
@@ -24,6 +23,7 @@ const createUser=async function (req, res) {
           lastname: req.fields.lastname,
           email: req.fields.email,
           phone: req.fields.phone,
+        
           password: enccryptpassword
         })
   
@@ -71,7 +71,8 @@ const forgotPassword=  async function (req, res) {
       // Generate random reset token for user
       const token = crypto.randomBytes(20).toString('hex');
       console.log(token)
-      const resetExpires = Date.now() + 100 * 60 * 60;
+      const resetExpires = Date.now() + 100*60*60;
+      console.log(resetExpires)
   
       // Update user with reset token and expiration
       user.resetPasswordToken = token;
@@ -115,7 +116,7 @@ const forgotPassword=  async function (req, res) {
   
   
   //  handle password reset link clicks
-  const resetPasswordToken= async (req, res) => {
+  const checktoken= async (req, res) => {
     try {
       const { token } = req.params;
   
@@ -173,6 +174,6 @@ const forgotPassword=  async function (req, res) {
 
 
 
-module.exports={createUser,loginHomepage,forgotPassword,handlePassword,resetPasswordToken}
+module.exports={createUser,loginHomepage,forgotPassword,handlePassword,checktoken}
 
   

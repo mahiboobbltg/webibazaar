@@ -1,64 +1,56 @@
-import React from 'react'
-import { NavDropdown, Navbar, Container, Nav} from 'react-bootstrap'
+import React from "react"
+import { Link } from "react-router-dom"
+import { Col, Dropdown } from "react-bootstrap"
 
+function Sabnav(props) {
+    return (<nav className=" p-1 d-flex align-items-center justify-content-center" style={{ backgroundColor: "rgba(43,110,248,1", height: "60px", position: "relative" }}>
 
-import {Link} from 'react-router-dom'
+        <Col className="flex-grow-1">
+            <ul className="list-unstyled d-flex fw-bolder gap-5 align-items-center" style={{ marginLeft: '30px' }}>
+                <li><Link className="text-decoration-none text-white" to='/'>HOME</Link></li>
+                <li><Link className="text-decoration-none text-white">SHOP</Link></li>
+                <li>
+                    <Link to='/blog'>
+                        <Dropdown>
+                            <Dropdown.Toggle variant="transparent" id="dropdown-basic" className="text-white fw-bold">
+                                BLOG
+                            </Dropdown.Toggle>
 
+                            <Dropdown.Menu>
+                                <Dropdown.Item href="#/action-1"><Link >Action </Link></Dropdown.Item>
+                                <Dropdown.Item href="#/action-2"><Link>Atction2</Link></Dropdown.Item>
+                                <Dropdown.Item href="#/action-3"><Link>Action3</Link></Dropdown.Item>
+                            </Dropdown.Menu>
+                        </Dropdown>
+                    </Link>
+                </li>
+                <li><Link>
+                    <Dropdown>
+                        <Dropdown.Toggle variant="transparent" id="dropdown-basic" className="text-white fw-bold">
+                            PAGES
+                        </Dropdown.Toggle>
 
-function Subnav
-    () {
-    return (
-        <div className='container-fluid bg-primary text-white mb-4'>
-            <div className='row'>
-                <div className='col my-2'>
-                    <Navbar expand="lg" className="">
-                        <Container fluid>
-                            <Navbar.Toggle aria-controls="navbarScroll" />
-                            <Navbar.Collapse id="navbarScroll">
-                                <Nav className="me-auto my-2 my-lg-0 "   style={{ maxHeight: '120px' }}   navbarScroll >
-                                    <Nav.Link href="/">
-                                        <Link to="/" varient='text-white' />Home
+                        <Dropdown.Menu style={{ width: '200px' }}>
+                            <Dropdown.Item href="#/action-1"><Link className="text-decoration-none text-black" to='/services'>SERVICE</Link></Dropdown.Item>
+                            <Dropdown.Item href="#/action-2"><Link className="text-decoration-none text-black" to='/faqpage'>FAQs PAGE</Link></Dropdown.Item>
+                            <Dropdown.Item href="#/action-3"><Link className="text-decoration-none text-black">GALLERY</Link></Dropdown.Item>
+                            <Dropdown.Item href="#/action-3"><Link className="text-decoration-none text-black">ELEMENTS</Link></Dropdown.Item>
+                            <Dropdown.Item href="#/action-3"><Link className="text-decoration-none text-black" to='/errorpage'>PAGE 404</Link></Dropdown.Item>
+                            <Dropdown.Item href="#/action-3"><Link className="text-decoration-none text-black" to='/aboutus'>ABOUT US</Link></Dropdown.Item>
+                        </Dropdown.Menu>
+                    </Dropdown>
+                </Link></li>
+                <li><Link className="text-decoration-none text-white" to='/contact'> CONTACT US</Link></li>
+                <li><Link className="text-decoration-none text-white" to='/features'>FEATURES</Link></li>
+            </ul>
+        </Col>
+        <Col className="fw-bolder d-block ms-auto" style={{ position: "absolute", right: '120px', marginTop: "2px" }}>
+            <img src="https://pixeltemplate.com/wordpress/shopeur/wp-content/themes/Shopeur/images/webi/svg/label.svg" alt="hdhd" width="40px" height={"30px"}></img>
+            <Link className="text-decoration-none d-block ms-auto text-white d-md-none d-lg-inline">SPECIAL OFFER !</Link>
+        </Col>
 
-                                    </Nav.Link>
-                                    <Nav.Link href="#oooo">SHOP</Nav.Link>
-                                    <NavDropdown title="BLOG" id="navbarScrollingDropdown">
-                                        <NavDropdown.Item href="#mmmmm">Action</NavDropdown.Item>
-                                        <NavDropdown.Item href="#yyyy">
-                                            Another action
-                                        </NavDropdown.Item>
-                                        <NavDropdown.Divider />
-                                        <NavDropdown.Item href="#uuuu">
-                                            Something else here
-                                        </NavDropdown.Item>
-                                    </NavDropdown>
-                                    <NavDropdown title="PAGES" id="navbarScrollingDropdown">
-                                        <NavDropdown.Item href="#rrrr">Action</NavDropdown.Item>
-                                        <NavDropdown.Item href="#ddd">
-                                            Another action
-                                        </NavDropdown.Item>
-                                        <NavDropdown.Divider />
-                                        <NavDropdown.Item href="#aaaa">
-                                            Something else here
-                                        </NavDropdown.Item>
-                                    </NavDropdown>
-                                    <Nav.Link href="#actiongg">CONTACT US</Nav.Link>
-                                    <Nav.Link href="#ggggg">FEATURES</Nav.Link>
-
-                                </Nav>
-
-                            </Navbar.Collapse>
-                        </Container>
-                    </Navbar>
-
-
-
-
-
-                </div>
-            </div>
-        </div>
-
-    )
+    </nav>)
 }
 
-export default Subnav
+
+export default Sabnav

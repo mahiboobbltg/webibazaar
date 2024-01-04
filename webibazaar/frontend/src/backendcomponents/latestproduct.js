@@ -4,7 +4,7 @@ import axios from 'axios'
 // import c1 from '../images/c1.jpeg'
 
 
-function Herosubsec2() {
+function LatestProduct() {
     const [products, setproducts] = useState();
     useEffect(() => {
         const getproducts = async () => {
@@ -33,7 +33,7 @@ function Herosubsec2() {
             <div className='row'>
                 {products ? (
                     products.data.map((item, index) => (
-                        <div key={index} className='col  my-3 fs-6'>
+                        <div key={index} className='col-lg-3  my-3 fs-6'>
                             <div className='card border-0'>
 
 
@@ -66,4 +66,4 @@ function Herosubsec2() {
     );
 }
 
-export default Herosubsec2
+export default LatestProduct

@@ -1,10 +1,45 @@
 import React from 'react'
 import Carousel from 'react-bootstrap/Carousel';
 
+
+import List from '@mui/material/List';
+import ListItemButton from '@mui/material/ListItemButton';
+import ListItemText from '@mui/material/ListItemText';
+// import ExpandLess from '@mui/icons-material/ExpandLess';
+// import ExpandMore from '@mui/icons-material/ExpandMore';
+import Typography from '@mui/material/Typography';
+
+
+// import Button from '@mui/material/Button';
+import Tooltip, { tooltipClasses } from '@mui/material/Tooltip';
+import { styled } from '@mui/material/styles';
+import Box from '@mui/material/Box';
+
+
+
 function Herosecton() {
+    // const [open, setOpen] = React.useState(true);
+
+    // const handleClick = () => {
+    //     setOpen(!open);
+    // };
+
+
+    const HtmlTooltip = styled(({ className, ...props }) => (
+        <Tooltip {...props} classes={{ popper: className }} />
+    ))(({ theme }) => ({
+        [`& .${tooltipClasses.tooltip}`]: {
+            backgroundColor: '#FFFFFF',
+            color: 'rgba(0, 0, 0, 0.87)',
+            fontSize: theme.typography.pxToRem(12),
+
+        },
+    }));
+
+
     return (
         <div>
-            <div className='container'>
+            <div className='container mt-4'>
                 <div className='row'>
                     <div className='col-md-3'>
                         <div className='card'>
@@ -12,41 +47,112 @@ function Herosecton() {
                                 <i className='fa fa-bars  ms-0'></i>
                                 <p className='fw-bolder mt-3 me-5 '>ALL CATEGORY</p>
                             </div>
-                            <div className='d-flex justify-content-between '>
-                                <p className='h6'> Accessories</p>
-                                <i className='fa fa-angle-right'></i>
-                            </div>
-                            <div className=''>
-                                <p className='h6'> Hydraulic</p>
-                            </div>
-                            <div className='d-flex justify-content-between'>
-                                <p className='h6'> Lamp</p>
-                                <i className='fa fa-angle-right'></i>
-                            </div>
-                            <div className=''>
-                                <div className='h6'><span>Cryotronics</span></div>
-                            </div>
-                            <div className=''>
-                                <div className='h6'><span> Induction</span></div>
 
-                            </div>
-                            <div className='d-flex justify-content-between '>
-                                <p className='h6'>Avionic</p>
-                                <i className='fa fa-angle-right'></i>
-                            </div>
-                            <div className=''>
-                                <p className='h6'> Circuits</p>
-                            </div>
-                            <div className=''>
-                                <p className='h6'>ElectronicsY</p>
-                            </div>
-                            <div className=''>
-                                <p className='h6 '>Handwatch</p>
-                            </div>
+                            <List >
+
+
+
+                                <HtmlTooltip placement="right-start" className="bg-white"
+                                    title={
+                                            <Box >
+                                                <div className='row'>
+                                                    <Typography className='card-body col-4' component="div" >
+                                                        <div className='card-body'>
+                                                            <div className='card-title'>CATEGORY</div>
+                                                            <p>  <span>Avionics</span></p>
+                                                            <p>  <span>Avionics</span></p>
+                                                            <p>  <span>Avionics</span></p>
+                                                            <p>  <span>Avionics</span></p>
+                                                            <p>  <span>Avionics</span></p>
+                                                        </div>
+                                                    </Typography>
+                                                    <Typography className='card-body col-4' component="div" >
+                                                        <div className='card-body'>
+                                                            <div className='card-title'>CATEGORY</div>
+                                                            <p>  <span>Avionics</span></p>
+                                                            <p>  <span>Avionics</span></p>
+                                                            <p>  <span>Avionics</span></p>
+                                                            <p>  <span>Avionics</span></p>
+                                                            <p>  <span>Avionics</span></p>
+                                                        </div>
+                                                    </Typography>
+                                                    <Typography className='card-body col-4' component="div" >
+                                                        <div className='card-body'>
+                                                            <div className='card-title'>CATEGORY</div>
+                                                            {/* <p>  <img src='https://pixeltemplate.com/wordpress/shopeur/wp-content/uploads/2020/08/21.jpg' width={200} alt='rrrr' />  </p> */}
+                                                          
+                                                            <p>  <span>Avionics</span></p>
+                                                            <p>  <span>Avionics</span></p>
+                                                        
+                                                        </div>
+                                                    </Typography>
+
+                                                </div>
+
+
+
+
+                                            </Box>
+                                    }
+                                >
+                                    <ListItemButton>    <ListItemText primary="Sent mail" />  </ListItemButton>
+                                </HtmlTooltip>
+
+                                <ListItemButton>
+                                    <ListItemText primary="Drafts" />
+                                </ListItemButton>
+                                
+                                <ListItemButton>
+                                    <ListItemText primary="Drafts" />
+                                </ListItemButton>
+                                <HtmlTooltip placement="right-start" className="bg-white"
+                                    title={
+                                              
+                                                    <Typography  className='col-12' >
+                                                        <div className='card-body'>
+                                                            <p className='ps-4 pe-4 ms-5 me-5'>  <span>Avionics</span></p>
+                                                            <p className='ps-4 pe-4 ms-5 me-5'>  <span>Avionics</span></p>
+                                                      
+                                                        </div>
+                                                    </Typography>
+                                    }
+                                >
+                                    <ListItemButton>   <ListItemText primary="Lamp" />  </ListItemButton>
+                                </HtmlTooltip>
+                                <ListItemButton>
+                                    <ListItemText primary="Drafts" />
+                                </ListItemButton>
+                                
+                                <ListItemButton>
+                                    <ListItemText primary="Drafts" />
+                                </ListItemButton>
+                                
+                                <HtmlTooltip placement="right-start" className="bg-white"
+                                    title={
+                                              
+                                                    <Typography  className='col-12' >
+                                                        <div className='card-body'>
+                                                            <p className='ps-4 pe-4 ms-5 me-5'>  <span>Avionics</span></p>
+                                                            <p className='ps-4 pe-4 ms-5 me-5'>  <span>Avionics</span></p>
+                                                      
+                                                        </div>
+                                                    </Typography>
+                                    }
+                                >
+                                    <ListItemButton>    <ListItemText primary="Avionics" />  </ListItemButton>
+                                </HtmlTooltip>
+                                
+                                <ListItemButton>
+                                    <ListItemText primary="Drafts" />
+                                </ListItemButton>
+                                
+                              
+                                
+                            </List>
 
                         </div>
                     </div>
-                    <div className='col-md-9'>
+                    <div className='col-md-9' >
                         <Carousel data-bs-theme="dark">
                             <Carousel.Item>
                                 <img
@@ -97,6 +203,10 @@ function Herosecton() {
 
 
             </div>
+
+
+
+
         </div>
     )
 }

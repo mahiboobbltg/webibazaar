@@ -2,19 +2,17 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import Navbar from '../backendcomponents/navbar'
-import Movingbrand from '../backendcomponents/movingbrand';
 import Footer from '../backendcomponents/footer';
+import { useCart } from "../context/createContext";
+import ControlledTabsExample from './singleproductdetails';
 
-// import Nav from 'react-bootstrap/Nav';
-
-
-
-function SingleProduct(addToCart) {
+function SingleProduct() {
     const { productId } = useParams();
-    const [product, setProduct] = useState(null);
+    const [product, setProduct] = useState("");
+    const { addToCart } = useCart();
 
 
-   
+
 
     useEffect(() => {
 
@@ -28,20 +26,24 @@ function SingleProduct(addToCart) {
             });
     }, [productId]);
 
+
+    const handleAddToCart = () => {
+        // Call the addToCart function from the CartContext
+        console.log(product)
+        addToCart(product);
+    };
     if (!product) {
         return <div>Loading...</div>;
     }
-
     return (
         <div>
-
             <Navbar />
-
-            <div className='container'>
+            <div className='container mt-4 mb-5'>
                 <div className='row'>
                     <div className='col-lg-6 colmd-6 '>
                         <div className='card border-0' style={{ height: "500px" }}>
-                            <img alt='' src='' />
+                            <img src={"https://pixeltemplate.com/wordpress/shopeur/wp-content/uploads/2020/08/27-300x298.jpg"} className="img-fluid position-relative" alt="images" height={150} />
+
                         </div>
                     </div>
                     <div className='col-lg-6 colmd-6 '>
@@ -50,42 +52,29 @@ function SingleProduct(addToCart) {
                                 <h1>{product.productname}</h1>
                                 <p>Description: {product.description}</p>
                                 <p>Price: ${product.price}</p>
-                                <button
-                                    onClick={() => addToCart(product)}
-                                >Add To Cart</button>
+                                <div className="product">
+                                    <h3>{product.name}</h3>
+                                    <p>{product.description}</p>
+                                    <p>Quantity Available: {product.quantity}</p>
+                                    <button onClick={handleAddToCart} className="btn btn-primary"   >Add to Cart</button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-
-                <div className='row'>
-
-                    <div className='col'>
-                        <div className='card'>
-                      
+                <div className='caonatiner mt-4 mb-4'>
+                    <div className='row'>
+                        <div className='col'>
+                            <div className='card ' >
+                                <ControlledTabsExample />
+                            </div>
                         </div>
                     </div>
                 </div>
 
-
-
-
             </div>
-
-
-
-
-
-            <Movingbrand />
             <Footer />
-
-
-
-
-
-
-
         </div>
     );
 }

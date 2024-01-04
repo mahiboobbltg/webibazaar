@@ -1,64 +1,52 @@
 import React from 'react';
-// import Navbar from './backendcomponents/navbar'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-// import Homepage from './backendcomponents/homepage';
-// import Herosecton from './backendcomponents/category';
-// import Herosubsec from './backendcomponents/herosubsec';
-// import Herosubsec3 from './backendcomponents/herosubsec3';
-// import Herosubsec4 from './backendcomponents/herosubsec4';
-// import Herosubsec5 from './backendcomponents/herosubsec5';
-// import Herosubsec6 from './backendcomponents/herosubsec6';
-// import Footer from './backendcomponents/footer';
-// import Blog from './backendcomponents/blog';
-// import Movingbrand from './backendcomponents/movingbrand';
-// import Themeextimg from './backendcomponents/textonimage';
-// import Register from './pages/auth/register';
-import {BrowserRouter,  Route, Routes } from 'react-router-dom';
+
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
+
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import ProductList from './product/productlist';
 import SingleProduct from './product/singleproduct';
+import Home from './comp/home'
+import Signin from './comp/signin'
+import Signup from './comp/signup';
+import NewSubmit from './comp/NewSubmit';
+import ForgetPassword from './comp/forgotpassword';
+import Cart from './product/addToCart';
+import Blog from './backendcomponents/blog';
+import Services from './pages/services';
+import Contact from './pages/contact';
+import Aboutus from './pages/aboutus';
+import Faq from './pages/faqpage';
+import Pageerror from './pages/errorpage';
+import CheckoutForm from './product/checkout';
 
-// import ProductApp from './productapp';
+
 
 
 function App() {
   return (
     <BrowserRouter>
-     
-        <Routes>
-          <Route path="/" exact element={<ProductList />} />
-          <Route path="/product/:productId" exact element={<SingleProduct />} />
-          
-          
-          {/* <Route path="/" exact element={<ProductList />} />
-          <Route path="/" exact element={<ProductList />} />
-          <Route path="/" exact element={<ProductList />} />
-          <Route path="/" exact element={<ProductList />} />
-          <Route path="/" exact element={<ProductList />} />
-          <Route path="/" exact element={<ProductList />} />
-          <Route path="/" exact element={<ProductList />} /> */}
-     
-          {/* <Herosecton />
-          <Register />
-          <Herosubsec />
-          <Homepage />
-          <Herosubsec3 />
-          <Herosubsec4 />
-          <Herosubsec5 />
-          <Herosubsec6 />
-          <Blog />
-          <Themeextimg />
-          <Movingbrand />
-          <Footer /> */}
-
-        </Routes>
-
-
-
-
-
-
-
+      <Routes>
+        <Route path="/" exact element={<ProductList />} />
+        <Route path="/product/:productId" exact element={<SingleProduct />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/signin" element={<Signin />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/forgotpassword" element={<ForgetPassword />} />
+        <Route path="/otp" element={<NewSubmit />} />
+        <Route path="/addToCart" exact element={<Cart />} />
+        <Route path="/blog" exact element={<Blog />} />
+        <Route path="/services" exact element={<Services />} />
+        <Route path="/contact" exact element={<Contact />} />
+        <Route path="/aboutus" exact element={<Aboutus />} />
+        <Route path="/faqpage" exact element={<Faq />} />
+        <Route path="/errorpage" exact element={<Pageerror />} />
+        <Route path="/checkout" exact element={<CheckoutForm />} />
+      </Routes>
     </BrowserRouter>
   );
 

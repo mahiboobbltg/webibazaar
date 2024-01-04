@@ -8,7 +8,7 @@ const corsOptions ={
     origin:'*', 
     credentials:true,            
     optionSuccessStatus:200,
- }
+}
 
 const authRoute=require("./routes/authRoute")
 const productRoute=require("./routes/productRoute")

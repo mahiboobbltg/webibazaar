@@ -4,20 +4,11 @@ const product = require("../model/product")
 
 const createProduct=async function (req, res) {
     try {
-      let { productid, productname, description, price, category } = req.fields
-      // console.log(req.fields)
-      if (!(productid && productname && description && price && category)) {
-        res.status(400).send("check your  inputs!!")
-      } else {
-        const newProduct = await product.create({
-          productid: req.fields.productid,
-          productname: req.fields.productname,
-          description: req.fields.description,
-          price: req.fields.price,
-          category: req.fields.category,
-        });
-        res.status(201).send("database is created for product" )
-      }
+     
+      const data = new product(req.fields);
+      await data.save();
+      res.status(201).json(data);
+   
   
     } catch (error) {
       res.status(500).json({ message: error.message });
