@@ -23,11 +23,17 @@ function Herosubsec5() {
 
     return (
 
-        <div className='container md-3'>
-            <div className='mb-3'>
-                <h3>  TOP CATEGORY</h3>
+        <div className='container mt-4 md-3'>
+            
 
-            </div>
+
+            <div className="row ">
+                   <div   className="col-3 mt-4" ><h3> TOP CATEGORY</h3></div> 
+                   <div   className="col-8 mt-4" ><hr  /></div> 
+                </div>
+
+
+
             <div className='row'>
 
                 {products ? (

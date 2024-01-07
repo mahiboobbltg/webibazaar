@@ -24,15 +24,16 @@ function TopCategory () {
     return (
 
         <div className='container md-3'>
-            <div className='mb-3'>
-                <h3>  TOP CATEGORY</h3>
-
+              <div className='mb-3 d-flex'>
+                <h3 className=' col-3'>  TOP CATEGORY</h3>
+                <hr className=' col-7 ' />
             </div>
+           
             <div className='row'>
 
                 {products ? (
                     products.data.map((item, index) => (
-                        <div key={index} className='col-lg-3  my-3 fs-6'>
+                        <div key={index} className='col my-3 fs-6'>
                             <div className='card '>
                                 <img src='/images/c1.jpeg' className="img-fluid position-relative" alt="images" height={150} />
                             </div>
@@ -46,20 +47,32 @@ function TopCategory () {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
            
         </div>
     );
+
+
+
+
+
+
+
+
 }
 
 export default TopCategory 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -38,11 +38,11 @@ function SingleProduct() {
     return (
         <div>
             <Navbar />
-            <div className='container mt-4 mb-5'>
+            <div className='container  mb-5'>
                 <div className='row'>
                     <div className='col-lg-6 colmd-6 '>
-                        <div className='card border-0' style={{ height: "500px" }}>
-                            <img src={"https://pixeltemplate.com/wordpress/shopeur/wp-content/uploads/2020/08/27-300x298.jpg"} className="img-fluid position-relative" alt="images" height={150} />
+                        <div className='card border' >
+                            <img src={product.imageURL} className="img-fluid" alt={product.productname}style={{objectFit:"contain"}} />
 
                         </div>
                     </div>
@@ -63,7 +63,7 @@ function SingleProduct() {
                     </div>
                 </div>
 
-                <div className='caonatiner mt-4 mb-4'>
+                <div className='caonatiner mt-5 mb-4'>
                     <div className='row'>
                         <div className='col'>
                             <div className='card ' >

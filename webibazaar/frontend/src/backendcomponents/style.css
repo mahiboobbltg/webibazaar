@@ -1,57 +1,26 @@
-.moving img{
-    aspect-ratio: 3/2 ;
-    object-fit: contain;
+/* src/Marquee.css */
+.marquee-container {
+  width: 100%;
+  overflow: hidden;
 }
-.dcard img{
-    width: 5%;
-    aspect-ratio: 3/2 ;
-    object-fit: contain;
+
+.marquee-content {
+  white-space: nowrap;
+  animation: marquee 8s linear infinite; /* Adjust the duration as needed */
+}
+
+@keyframes marquee {
+  25% {
+      transform: translateX(5%);
+    }
+    
+    100% {
+      transform: translateX(-5%);
+    }
+  }
+.marquee-content img {
+  margin-top: 8px;
+  /* margin-right: 20px; Adjust spacing between images as needed */
 }
 
 
-.dcard img{
-    width: 5%;
-    aspect-ratio: 3/2 ;
-    object-fit: contain;
-}
-.moving{
-    animation: 3s linear 1s infinite alternate slidein;
-}
-
-/* 
-:root {
-    overflow: hidden;
-    background-color: lightblue;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .sun {
-    background-color: yellow;
-    border-radius: 50%;
-    height: 100vh;
-    aspect-ratio: 1 / 1;
-   
-    animation:
-      10s linear 0s infinite alternate rise,
-      10s linear 0s infinite alternate bounce;
-  }
-  
-  @keyframes rise {
-    from {
-      transform: translateY(110vh);
-    }
-    to {
-      transform: translateY(0);
-    }
-  }
-  
-  @keyframes bounce {
-    from {
-      transform: translateX(-50vw);
-    }
-    to {
-      transform: translateX(50vw);
-    }
-  }
-   */

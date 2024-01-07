@@ -1,6 +1,5 @@
 import React from 'react';
 
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
@@ -23,7 +22,7 @@ import Aboutus from './pages/aboutus';
 import Faq from './pages/faqpage';
 import Pageerror from './pages/errorpage';
 import CheckoutForm from './product/checkout';
-
+import Shop from './pages/shop';
 
 
 
@@ -31,10 +30,10 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" exact element={<ProductList />} />
+        <Route path="/productlist" exact element={<ProductList />} />
         <Route path="/product/:productId" exact element={<SingleProduct />} />
         <Route path="/signup" element={<Signup />} />
-        <Route path="/signin" element={<Signin />} />
+        <Route path="/" element={<Signin />} />
         <Route path="/home" element={<Home />} />
         <Route path="/forgotpassword" element={<ForgetPassword />} />
         <Route path="/otp" element={<NewSubmit />} />
@@ -46,6 +45,7 @@ function App() {
         <Route path="/faqpage" exact element={<Faq />} />
         <Route path="/errorpage" exact element={<Pageerror />} />
         <Route path="/checkout" exact element={<CheckoutForm />} />
+        <Route path="/shop" exact element={<Shop />} />
       </Routes>
     </BrowserRouter>
   );
@@ -54,3 +54,23 @@ function App() {
 }
 
 export default App;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

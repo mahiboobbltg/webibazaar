@@ -18,7 +18,6 @@ const MyComponent = () => {
   return (
     <>
       <select className="border-0"  style={{width:"200px"}} onChange={onChange}>
-      <i className="fa fa-angle-down"></i>
         <option>All Categories  </option>
         {cities.map((cities) => (
           <option key={cities.id} value={cities.value} >

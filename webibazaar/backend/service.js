@@ -14,7 +14,7 @@ const authRoute=require("./routes/authRoute")
 const productRoute=require("./routes/productRoute")
 const orderRoute=require("./routes/orderRoute")
 const cartRoute=require("./routes/cartRoute")
-
+const newuserauth=require("./routes/user")
 
 
 app.use(express.urlencoded({ extended: false }))
@@ -79,7 +79,7 @@ app.use("/api/cart",cartRoute)
 // // api for login for homepage
 
 
-
+app.use("/api/newuser", newuserauth);
 
 
 // // api for product for post

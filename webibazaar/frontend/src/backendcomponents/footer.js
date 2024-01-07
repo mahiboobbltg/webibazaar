@@ -1,134 +1,127 @@
-import React from 'react'
-
-import Button from 'react-bootstrap/Button';
-import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-
-import './style.css'
-
-
-
-
-function Footer
-    () {
+import React from "react";
+import Button from "react-bootstrap/Button";
+import Container from "react-bootstrap/Container";
+import Form from "react-bootstrap/Form";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import { ImYoutube2 } from "react-icons/im";
+import { IoLocation } from "react-icons/io5";
+import { FaPhone } from "react-icons/fa6";
+import { IoMdMail } from "react-icons/io";
+import { FaFacebookF, FaTwitter, FaRss, FaInstagram } from "react-icons/fa";
+export const Footer = () => {
     return (
-        <div className="container-fluid bg-light">
-            <footer className="  ">
-                <div className="container ">
-                    <Navbar expand="lg" className="rounded bg-primary    ">
-                        <Container className="">
-                            <Navbar.Toggle aria-controls="navbarScroll" />
-                            <Navbar.Collapse id="navbarScroll">
-                                <Nav className="me-auto my-4 my-lg-0 " style={{ maxHeight: '150px' }} navbarScroll>
-                                    <Nav.Link href="#action1"><Button variant="light"><i className="fa-brands fa-md fa fa-facebook-f"></i></Button></Nav.Link>
-                                    <Nav.Link href="#action1"><Button variant="light"><i className="fa-brands fa fa-twitter"></i></Button></Nav.Link>
-                                    <Nav.Link href="#action1"><Button variant="light"><i className="fa-sharp fa fa-solid fa-rss"></i></Button></Nav.Link>
-                                    <Nav.Link href="#action1"><Button variant="light"><i className="fa-brands fa fa-square-youtube"></i></Button></Nav.Link>
-                                    <Nav.Link href="#action1"><Button variant="light"><i className="fa-solid fa-camera"></i></Button></Nav.Link>
-                                </Nav>
-                                <Navbar.Text className='text-white fs-4 me-5'>
+        <>
+            <div className="container">
+                <Navbar expand="lg" className="bg-primary mb-5 p-3">
+                    <Container fluid>
+                        {/* <Navbar.Brand href="#" className="bg-white p-2 rounded"><FaFacebookF /></Navbar.Brand> */}
+                        {/* <Navbar.Toggle aria-controls="navbarScroll" /> */}
+                        <Navbar.Collapse id="navbarScroll">
+                            <Nav className="me-auto my-2 my-lg-0" style={{ maxHeight: "100px" }} navbarScroll >
+                                <Nav.Link  href="#action1" className="bg-white px-3 me-2 rounded" >
+                                    <FaFacebookF />
+                                </Nav.Link>
+                                <Nav.Link  href="#action2  " className="bg-white px-3 me-2 ms-2 rounded" >
+                                    <FaTwitter />
+                                </Nav.Link>
+                                <Nav.Link href="#action3  "className="bg-white px-3 me-2  ms-2 rounded">
+                                    <FaRss />
+                                </Nav.Link>
+                                <Nav.Link  href="#action2  "className="bg-white px-3 me-2 ms-2 rounded">
+                                    <ImYoutube2 />
+                                </Nav.Link>
+                                <Nav.Link href="#action2  " className="bg-white px-3 me-2 ms-2 rounded" >
+                                    <FaInstagram />
+                                </Nav.Link>
+                            </Nav>
+                            <Form className="d-flex">
+                                <Nav.Link className="text-white me-5  fs-4">
                                     SIGN UP FOR NEWSLETTER
-                                </Navbar.Text>
-                                <Form className="d-flex">
-                                    <Form.Control type="search" placeholder="Search" style={{ width: "400px" }} className=" border-0 " aria-label="Search" />
-                                    <Button variant="warning" >Search</Button>
-                                </Form>
-                            </Navbar.Collapse>
-                        </Container>
-                    </Navbar>
-                </div>
+                                </Nav.Link>
+                                <Form.Control type="email" placeholder="Your email address"  className="ms-5" aria-label="Search"
+                                    style={{ width: "310px" }}
+                                />
+                                <Button
+                                    variant="outline-success "
+                                    className="text-white bg-warning me-2"
+                                >
+                                    SUBSCRIBE
+                                </Button>
+                            </Form>
+                        </Navbar.Collapse>
+                    </Container>
+                </Navbar>
+            </div>
 
-                <div className="container ">
-                <div className="row ">
-                    <div className="d-flex justify-content-around ">
-                        <div className="d-flex ">
-                            <div className="col">
-                                <h5>CONTACT US</h5>
-                                <ul className="list-unstyled text-small">
-                                    <li><a className="text-muted" href="eee"><i className="fa fa-xl  fa-location-dot"></i> 1093 Marigold Lane, Coral Way, Miami,<br /> Florida, 33169
-                                    </a></li>
-                                    <li><a className="text-muted" href="eee"><i className=" fa fa-xl fa-phone"></i> 610-403-403</a></li>
-                                    <li><a className="text-muted" href="eee"><i className='fa fa-xl fa-envelope'></i>company@example.com</a></li>
+            <div className="container d-flex justify-content-between">
+                <ul className="" style={{ listStyleType: "none" }}>
+                    <h4>CONTACT US</h4>
+                    <li><IoLocation className="text-primary me-2" />1093 Marigold Lane, Coral Way,Miami,</li>
+                    <li className="ms-4 "> Florida, 33169</li>
+                    <li><FaPhone className="text-primary me-2" />610-403-403</li>
+                    <li><IoMdMail className="text-primary me-2" />company@example.com</li>
+                    <li className="mt-2">
+                        <img src="/images/playstore.jpg" alt="imge" className="rounded me-2" style={{ width: "80px" }} />
+                        <img src="/images/applestore.jpg" alt="imge" className="rounded" style={{ width: "100px" }} />
+                    </li>
+                </ul>
 
-                                </ul>
-                            </div>
-                        </div>
-                        <div className="d-flex ">
-                            <div className="col">
-                                <h5>MY ACCOUNT</h5>
-                                <ul className="list-unstyled text-small">
-                                    <li><a className="text-muted" href="eee">Cool stuff</a></li>
-                                    <li><a className="text-muted" href="eee">Random feature</a></li>
-                                    <li><a className="text-muted" href="eee">Team feature</a></li>
-                                    <li><a className="text-muted" href="eee">Stuff for developers</a></li>
-                                    <li><a className="text-muted" href="eee">Another one</a></li>
-                                    <li><a className="text-muted" href="eee">Last time</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div className="d-flex ">
-                            <div className="col">
-                                <h5>CATEGORIES</h5>
-                                <ul className="list-unstyled text-small">
-                                    <li><a className="text-muted" href="eee">Resource</a></li>
-                                    <li><a className="text-muted" href="eee">Resource name</a></li>
-                                    <li><a className="text-muted" href="eee">Another resource</a></li>
-                                    <li><a className="text-muted" href="eee">Final resource</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div className="d-flex ">
-                            <div className="col">
-                                <h5>INFORMATION</h5>
-                                <ul className="list-unstyled text-small">
-                                    <li><a className="text-muted" href="eee">Business</a></li>
-                                    <li><a className="text-muted" href="eee">Education</a></li>
-                                    <li><a className="text-muted" href="eee">Government</a></li>
-                                    <li><a className="text-muted" href="eee">Gaming</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                </div>
+                <ul style={{ listStyleType: "none" }}>
+                    <h4>MY ACCOUNT</h4>
+                    <Nav.Link>Orders</Nav.Link>
+                    <Nav.Link>My Account</Nav.Link>
+                    <Nav.Link>Checkout</Nav.Link>
+                    <Nav.Link>Downloads</Nav.Link>
+                    <Nav.Link>Account details</Nav.Link>
+                </ul>
+                <ul style={{ listStyleType: "none" }}>
+                    <h4>CATEGORIES</h4>
+                    <Nav.Link>Hydraulic</Nav.Link>
+                    <Nav.Link>Atomtronics</Nav.Link>
+                    <Nav.Link>Cryotronics</Nav.Link>
+                    <Nav.Link>induction</Nav.Link>
+                    <Nav.Link>Spintronics</Nav.Link>
+                    <Nav.Link>Pro Electron</Nav.Link>
+                </ul>
+                <ul style={{ listStyleType: "none" }}>
+                    <h4>INFORMATION</h4>
+                    <Nav.Link>About Us</Nav.Link>
+                    <Nav.Link>Delivery Information</Nav.Link>
+                    <Nav.Link>Privacy PoNav.Linkcy</Nav.Link>
 
+                    <Nav.Link> Contact Us</Nav.Link>
+                </ul>
+            </div>
+            <hr />
 
-                <hr className='mb-4' />
+            <div className="container">
+                <p>
+                    <pre className="text-center">
 
+                        Radio | Hydraulic | Lamp | Pro Electron | Atomtronics | Avionics |
+                        Radio | Cryotronics | induction | Circuits | Cryotronics
+                    </pre>
+                </p>
+                <p>
+                    <pre className="text-center">
 
+                        | Spintronics | Accessories | Electronics | Chairs | Bar Table |
+                        Bioelectronics | Circuits
+                    </pre>
+                </p>
+            </div>
+            <hr />
+            <p className="text-center">Designed by <a href="g" className="text-dark" style={{ textDecoration: "none" }}> Demo Theme</a> All rights reserved.</p>
+            <p className="text-center">
+                <img src="/images/meastro.jpg" alt="iage" className="rounded me-2" style={{ width: "50px" }} />
+                <img src="/images/ame1.jpg" alt="age" className="rounded me-2" style={{ width: "50px" }} />
+                <img src="/images/pp.jpg" alt="imae" className="rounded me-2" style={{ width: "30px" }} />
+                <img src="/images/cc.jpg" alt="im" className="rounded me-2" style={{ width: "50px" }} />
 
-                <div className="container">
-                  
-                        <pre className="text-center">
+            </p>
+        </>
+    );
+};
 
-                            Radio | Hydraulic | Lamp | Pro Electron | Atomtronics | Avionics |
-                            Radio | Cryotronics | induction | Circuits | Cryotronics
-                        </pre>
-                   
-                        <pre className="text-center">
-
-                            | Spintronics | Accessories | Electronics | Chairs | Bar Table |
-                            Bioelectronics | Circuits
-                        </pre>
-              
-                </div>
-
-                <hr className='mb-4' />
-
-                <div className="container text-center">
-                    <p >Designed by Demo Theme All rights reserved.</p>
-                </div>
-                <div className="container d-flex justify-content-center align-items-center">
-                   <img className="dcard" src='/images/card1.png' alt='card'/ >
-                   <img className="dcard" src='/images/card2.png' alt='card'/>
-                   <img className="dcard" src='/images/card1.png' alt='card'/>
-                   <img className="dcard" src='/images/card2.png' alt='card'/>
-                </div>
-            </footer>
-        </div>
-    )
-}
-
-export default Footer
+export default Footer;

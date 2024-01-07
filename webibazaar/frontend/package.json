@@ -12,6 +12,7 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.6.2",
     "bootstrap": "^5.3.2",
+    "konva": "^9.3.0",
     "material-ui-popup-state": "^5.0.10",
     "mdb-react-ui-kit": "^7.0.0",
     "mdbreact": "^5.2.0",
@@ -21,10 +22,13 @@
     "react-fontawesome": "^1.7.1",
     "react-hot-toast": "^2.4.1",
     "react-icons": "^4.12.0",
+    "react-konva": "^18.2.10",
     "react-router-dom": "^6.21.1",
     "react-scripts": "5.0.1",
+    "react-slick": "^0.29.0",
     "react-swipeable-views-core": "^0.14.0",
     "react-swipeable-views-react-18-fix": "^0.14.1",
+    "slick-carousel": "^1.8.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

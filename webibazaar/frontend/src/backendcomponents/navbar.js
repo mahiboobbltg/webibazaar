@@ -84,8 +84,8 @@ function Navbar() {
                                                 </span>
                                                 <Menu {...bindMenu(popupState)}>
                                                     <MenuItem onClick={popupState.close}>Profile</MenuItem>
-                                                    <MenuItem onClick={popupState.close}>Sign in  </MenuItem>
-                                                    <MenuItem onClick={popupState.close}>Logout</MenuItem>
+                                                    <MenuItem onClick={popupState.close}> <Link to="/signin " className='text-decoration-none text-dark' >Sign in    </Link> </MenuItem>
+                                                    <MenuItem onClick={popupState.close}>  <Link to="/ " className='text-decoration-none text-dark' >Logout    </Link> </MenuItem>
                                                 </Menu>
                                             </React.Fragment>
                                         )}

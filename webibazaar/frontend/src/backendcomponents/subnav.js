@@ -8,7 +8,7 @@ function Sabnav(props) {
         <Col className="flex-grow-1">
             <ul className="list-unstyled d-flex fw-bolder gap-5 align-items-center" style={{ marginLeft: '30px' }}>
                 <li><Link className="text-decoration-none text-white" to='/'>HOME</Link></li>
-                <li><Link className="text-decoration-none text-white">SHOP</Link></li>
+                <li><Link className="text-decoration-none text-white" to='/shop'>SHOP</Link></li>
                 <li>
                     <Link to='/blog'>
                         <Dropdown>

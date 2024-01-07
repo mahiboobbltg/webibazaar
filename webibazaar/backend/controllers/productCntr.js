@@ -2,18 +2,15 @@ const product = require("../model/product")
 
 
 
-const createProduct=async function (req, res) {
-    try {
-     
-      const data = new product(req.fields);
+const createProduct= async (req, res) => {
+  try {
+      const data = new product(req.body);
       await data.save();
       res.status(201).json(data);
-   
-  
-    } catch (error) {
-      res.status(500).json({ message: error.message });
-    }
+  } catch (error) {
+      res.status(400).json({ error: error.message });
   }
+}
 
 const getProduct=function (req, res) {
     product.find({})

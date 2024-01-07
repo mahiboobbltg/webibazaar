@@ -1,33 +1,35 @@
-import React from 'react'
-import './style.css'
-import { Container, Row, Col, Card } from 'react-bootstrap';
-function Movingbrand() {
+
+  // src/Marquee.js
+  import React from "react";
+  import "./style.css";
+  
+  const image=[
+      "/images/s1.jpeg",
+      "/images/s2.jpeg",
+      "/images/s3.jpeg",
+      "/images/s4.jpeg",
+      "/images/s5.jpeg",
+      "/images/s6.png",
+      "/images/s1.jpeg",
+  ]
+  
+  const Marquee = () => {
+  
     return (
-        <div>
-            <Container className='mt-4 mb-5'>
-                <Row>
-                    <Col>
-                        <Card>
-                            <Card.Body className="d-flex justify-content-around">
-                            <img  src='/images/s7.png' className='moving'  alt="slide"   />
-                            <img  src='/images/s1.jpeg'  className='moving'  alt="slide"   />
-                            <img  src='/images/s2.jpeg'  className='moving'  alt="slide"   />
-                            <img  src='/images/s3.jpeg' className='moving'   alt="slide"   />
-                            <img  src='/images/s4.jpeg' className='moving'   alt="slide"   />
-                            <img  src='/images/s5.jpeg' className='moving'   alt="slide"   />
-                            <img  src='/images/s7.png'  className='moving'  alt="slide"   />
-                            </Card.Body>
-                        </Card>
-                    </Col>
-                </Row>
-
-
-
-            </Container>
-
+      <div className="container mt-5  mb-5" >
+        <div className="row ">
+          <div className="col">
+            <div className="marquee-container card"style={{height:"100px"}}>
+              <div className="marquee-content card-content  d-flex justify-content-between align-items-center">
+                {image.map((imageSrc, index) => (
+                  <img key={index} src={imageSrc} alt={`Imag ${index}`} width={120} />
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
-    )
-}
-
-export default Movingbrand
-
+      </div>
+    );
+  };
+  
+  export default Marquee;

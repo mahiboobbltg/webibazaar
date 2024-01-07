@@ -1,21 +1,25 @@
-import React from 'react'
-import Carousel from 'react-bootstrap/Carousel';
+import React from 'react';
+
+// import { Link } from 'react-router-dom';
+import Navbar from '../backendcomponents/navbar';
+import Footer from '../backendcomponents/footer';
+// import EmailIcon from '@mui/icons-material/Email';
+// import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
+// import LocationOnIcon from '@mui/icons-material/LocationOn';
+
 
 
 import List from '@mui/material/List';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
-import Typography from '@mui/material/Typography';
-
-
 import Tooltip, { tooltipClasses } from '@mui/material/Tooltip';
 import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
 
 
+const Shop = () => {
 
-function Herosecton() {
-    
 
 
     const HtmlTooltip = styled(({ className, ...props }) => (
@@ -29,12 +33,16 @@ function Herosecton() {
         },
     }));
 
-
     return (
-        <div>
-            <div className='container mt-4'>
-                <div className='row'>
-                    <div className='col-md-3 mb-4'>
+        <>
+            <Navbar />
+
+            <div className="container mt-4 mb-4">
+                <div className="row">
+
+
+                    <div className="col-3">
+
                         <div className='card'>
                             <div className='bg-warning d-flex justify-content-around align-items-center'>
                                 <i className='fa fa-bars  ms-0'></i>
@@ -136,68 +144,41 @@ function Herosecton() {
                             </List>
 
                         </div>
-                    </div>
-                    <div className='col-md-9' >
-                        <Carousel data-bs-theme="dark">
-                            <Carousel.Item>
-                                <img
-                                    className="d-block w-100"
-                                    src='/images/home.jpg'
-                                    alt="First slide"
-                                />
-                             <Carousel.Caption style={{ color: "white", marginLeft: "40%",  }}>
-                                    <h6>Spring-SUMMER 2022</h6>
-                                    <h1>Mi Airdots Pro</h1>
-                                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.pharetra augue mollis interdum.</p>
-                                    <button className='btn btn-primary'>Shop now</button>
-                                </Carousel.Caption>
-                            </Carousel.Item>
-                            <Carousel.Item>
-                                <img
-                                    className="d-block w-100"
-                                    src='/images/home.jpg'
-                                    alt="Second slide"
-                                />
-                               <Carousel.Caption style={{ color: "white", marginLeft: "40%",  }}>
-                                    <h6>Spring-SUMMER 2022</h6>
-                                    <h1>Mi Airdots Pro</h1>
-                                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.pharetra augue mollis interdum.</p>
-                                    <button className='btn btn-primary'>Shop now</button>
-                                </Carousel.Caption>
-                            </Carousel.Item>
-                            <Carousel.Item>
-                                <img
-                                    className="d-block w-100"
-                                    src='/images/home.jpg'
-                                    alt="Third slide"
-                                />
-                              <Carousel.Caption style={{ color: "white", marginLeft: "40%",  }}>
-                                    <h6>Spring-SUMMER 2022</h6>
-                                    <h1>Mi Airdots Pro</h1>
-                                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.pharetra augue mollis interdum.</p>
-                                    <button className='btn btn-primary'>Shop now</button>
-                                </Carousel.Caption>
-                            </Carousel.Item>
-                        </Carousel>
 
+                        <div className="col-9 mt-5">
+                            <p>Product Tags</p><hr />
+                            <button className="btn btn-sm my-1 mx-2" style={{ backgroundColor: "whitesmoke" }}>Accessories</button>
+                            <button className="btn btn-sm" style={{ backgroundColor: "whitesmoke" }}>Avionics</button>
+                            <button className="btn btn-sm" style={{ backgroundColor: "whitesmoke" }}>Bioelectronics</button>
+                            <button className="btn btn-sm my-1 mx-2" style={{ backgroundColor: "whitesmoke" }}>Cryotonics</button>
+                            <button className="btn btn-sm" style={{ backgroundColor: "whitesmoke" }}>Electronics</button>
+                            <button className="btn btn-sm my-1 mx-2" style={{ backgroundColor: "whitesmoke" }}>Handwatch</button>
+                            <button className="btn btn-sm" style={{ backgroundColor: "whitesmoke" }}> Induction</button>
+                            <button className="btn btn-sm my-1 mx-2" style={{ backgroundColor: "whitesmoke" }}>Integrated</button>
+                            <button className="btn btn-sm" style={{ backgroundColor: "whitesmoke" }}>Iphone</button>
+                            <button className="btn btn-sm my-1 mx-2" style={{ backgroundColor: "whitesmoke" }}>Laptops</button>
+                            <button className="btn btn-sm" style={{ backgroundColor: "whitesmoke" }}>Mega</button>
+                            <button className="btn btn-sm my-1 mx-2" style={{ backgroundColor: "whitesmoke" }}>Mobiles</button>
+                        </div>
 
                     </div>
 
+                    <div className="col-9">
+                        <h5>Shop</h5>
 
+
+
+
+
+                    </div>
 
 
 
                 </div>
-
-
-
             </div>
-
-
-
-
-        </div>
+            <Footer />
+        </>
     )
 }
 
-export default Herosecton
+export default Shop;

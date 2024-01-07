@@ -9,7 +9,7 @@ const Faq = () => {
         <div>
             <Navbar />
          
-            <div className="container mt-5">
+            <div className="container mt-5 mb-5">
                 <div className="row justify-content-center">
                     <div className="col-lg-4 col-md-5 col-12 d-none d-md-block">
                         <div className="rounded shadow p-4 sticky-bar">

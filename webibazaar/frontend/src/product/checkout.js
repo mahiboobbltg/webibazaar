@@ -186,7 +186,7 @@ const CheckoutForm = () => {
                                 </ul>
 
                                 <div className="mt-4 pt-2">
-                                    <Link to='./'><a href="shop-checkouts.html" className="btn btn-block btn-primary">Place Order</a></Link>
+                                    <Link to='./'><a href="/shop-checkouts.html" className="btn btn-block btn-primary">Place Order</a></Link>
                                 </div>
                             </div>
                         </div>
